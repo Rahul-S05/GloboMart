@@ -1,0 +1,7 @@
+C:\Rahul\POC\GloboMart.App\GloboMart.App.Core.Repositories\bin\Debug\GloboMart.App.Core.Repositories.dll
+C:\Rahul\POC\GloboMart.App\GloboMart.App.Core.Repositories\bin\Debug\GloboMart.App.Core.Repositories.pdb
+C:\Rahul\POC\GloboMart.App\GloboMart.App.Core.Repositories\bin\Debug\GloboMart.App.Core.DomainModels.dll
+C:\Rahul\POC\GloboMart.App\GloboMart.App.Core.Repositories\bin\Debug\GloboMart.App.Core.DomainModels.pdb
+C:\Rahul\POC\GloboMart.App\GloboMart.App.Core.Repositories\obj\Debug\GloboMart.App.Core.Repositories.csprojResolveAssemblyReference.cache
+C:\Rahul\POC\GloboMart.App\GloboMart.App.Core.Repositories\obj\Debug\GloboMart.App.Core.Repositories.dll
+C:\Rahul\POC\GloboMart.App\GloboMart.App.Core.Repositories\obj\Debug\GloboMart.App.Core.Repositories.pdb

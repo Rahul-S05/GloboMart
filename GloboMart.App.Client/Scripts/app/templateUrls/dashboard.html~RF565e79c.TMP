@@ -1,0 +1,80 @@
+﻿<div class="container">
+    <h1></h1>
+    <div class="panel-group">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Product</div>
+            <div class="panel-body">
+                
+                <div class="col-md-12 form-group">
+                    <label class="col-md-2 col-form-label" for="productType">Product Type :</label>
+                    <div class="col-md-2">
+                        <select ng-model="filterSelectedProductType" ng-options="obj.id as obj.description for obj in productTypes" class="form-control" required>
+                            <option value="">---Select option-----</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Name</th>.
+                            <th>Description</th>
+                            <th>Product Type</th>
+                            <th>Barcode</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                        <tr ng-repeat="product in products">
+                            <td>{{ product.name }}</td>
+                            <td>{{ product.description }}</td>
+                            <td>{{ product.productType.name }}</td>
+                            <td>{{ product.barcode }}</td>
+                            <td><a href="#" ng-click="editProduct(product)">Edit</a></td>
+                            <td><a href="#" ng-click="deleteProduct(product)">Delete</a></td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">Add/Edit Product</div>
+            <div class="panel-body">
+                
+                <div class="col-md-12 form-group">
+                    <label class="col-md-2 col-form-label" for="productName">Product Name:</label>
+                    <div class="col-md-4">
+                        <input type="text" ng-model="product.name" class="form-control"></div>
+                </div>
+                <div class="col-md-12 form-group">
+                    <label class="col-md-2 col-form-label" for="productDescription">Product Description:</label>
+                    <div class="col-md-2">
+                        <input type="text" ng-model="product.description" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-12 form-group">
+                    <label class="col-md-2 col-form-label" for="productType">Product Type :</label>
+                    <div class="col-md-2">
+                        <select ng-model="selectedProductTypeId" ng-options="obj.id as obj.description for obj in productTypesAdd" class="form-control" required>
+                            <option value="">---Select option-----</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-12 form-group">
+                    <label class="col-md-2 col-form-label" for="productBarcode">Product Barcode:</label>
+                    <div class="col-md-2">
+                        <input type="text" ng-model="product.barcode" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-12 form-group">
+                    <label class="col-md-2 col-form-label" for="productPrice">Product Price:</label>
+                    <div class="col-md-2">
+                        <input type="text" ng-model="product.price" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-8 col-md-offset-2">
+                    <input type="button" value="save" ng-click="saveProduct()"  class="btn btn-sm btn-primary"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

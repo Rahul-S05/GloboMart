@@ -1,0 +1,6 @@
+C:\Rahul\POC\GloboMart.App\GloboMart.App.Client\bin\GloboMart.App.Client.dll.config
+C:\Rahul\POC\GloboMart.App\GloboMart.App.Client\bin\GloboMart.App.Client.dll
+C:\Rahul\POC\GloboMart.App\GloboMart.App.Client\bin\GloboMart.App.Client.pdb
+C:\Rahul\POC\GloboMart.App\GloboMart.App.Client\obj\Debug\GloboMart.App.Client.csprojResolveAssemblyReference.cache
+C:\Rahul\POC\GloboMart.App\GloboMart.App.Client\obj\Debug\GloboMart.App.Client.dll
+C:\Rahul\POC\GloboMart.App\GloboMart.App.Client\obj\Debug\GloboMart.App.Client.pdb

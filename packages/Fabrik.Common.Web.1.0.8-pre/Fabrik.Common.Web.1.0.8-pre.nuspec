@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>Fabrik.Common.Web</id>
+    <version>1.0.8-pre</version>
+    <title>Fabrik.Common.Web</title>
+    <authors>Ben Foster</authors>
+    <owners>Ben Foster</owners>
+    <licenseUrl>https://raw.github.com/benfoster/Fabrik.Common/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/benfoster/Fabrik.Common</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Fabrik.Common.Web is full of useful code we use for building ASP.NET web applications at fabrik.</description>
+    <summary />
+    <copyright>Copyright 2012 Ben Foster</copyright>
+    <tags>fabrik dotnet aspnetmvc</tags>
+    <dependencies>
+      <dependency id="Fabrik.Common" version="1.0.8-pre" />
+      <dependency id="Microsoft.AspNet.Mvc" version="4.0.30506.0" />
+    </dependencies>
+  </metadata>
+</package>

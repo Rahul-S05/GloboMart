@@ -1,0 +1,93 @@
+﻿(function () {
+    "use strict";
+    angular
+       .module("GloboMartApp")
+       .controller("dashboardController",
+                    ["$scope", "dataService", dashboardController]);
+
+    function dashboardController($scope, dataService) {
+        $scope.data = "test";
+
+        $scope.products = [];
+        $scope.productTypes = [];
+        $scope.productTypesAdd = [];
+
+        $scope.product = [];
+
+        function init() {
+            getProducts();
+            getProductType();
+        };
+
+
+        init();
+
+        $scope.saveProduct = function () {
+            var requestObj =angular.copy($scope.product);
+
+            //    {
+            //    "name": $scope.product.name,
+            //    "description": $scope.product.description,
+            //    "productTypeId": $scope.selectedProductTypeId,
+            //    "barcode": $scope.product.barcode,
+            //    "price": $scope.product.price
+            //}
+            if (!$scope.product.id)
+            {
+               
+
+            }
+
+            
+            dataService.saveProduct(requestObj).then(function (response) {
+                alert('Data Saved');
+                $scope.product = [];
+                $scope.selectedProductTypeId = 0;
+                getProducts();
+            }, function (errorReason) {
+                alert('Error');
+            });
+        };
+
+
+        $scope.editProduct = function (data) {
+            console.log(data);
+            $scope.product = data;
+            $scope.selectedProductTypeId = data.productType.id;
+            //dataService.saveProduct(requestObj).then(function (response) {
+            //    alert('Data Saved');
+            //    $scope.product = [];
+            //    $scope.selectedProductTypeId = 0;
+            //    getProducts();
+            //}, function (errorReason) {
+            //    alert('Error');
+            //});
+        }
+
+
+
+
+        function getProducts() {
+            dataService.getProducts().then(function (response) {
+                var storedItem = response.data;
+                $scope.products = storedItem;
+
+            }, function (errorReason) {
+                //handleError(errorReason)
+            });
+        };
+
+        function getProductType() {
+            dataService.getProductType().then(function (response) {
+                $scope.productTypes = response.data;
+                $scope.productTypesAdd = response.data;
+            }, function (errorReason) {
+                //handleError(errorReason)
+            });
+        }
+
+
+    }
+
+
+}());

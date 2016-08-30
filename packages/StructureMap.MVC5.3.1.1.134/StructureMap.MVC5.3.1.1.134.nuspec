@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>StructureMap.MVC5</id>
+    <version>3.1.1.134</version>
+    <title>StructureMap.MVC5</title>
+    <authors>Web Advanced</authors>
+    <owners>Web Advanced</owners>
+    <licenseUrl>https://github.com/webadvanced/Structuremap.MVC5/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/webadvanced/Structuremap.MVC5</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Adds the latest version of structuremap and configures it as the default Dependency Resolver for ASP.NET MVC5. Does not work with 'ApiControllers', please add the Structuremap.WebAPI2 package if you need WebAPI support.</description>
+    <summary>An MVC5 IDependencyResolver wrapper for Structuremap 3.x</summary>
+    <language>en-US</language>
+    <dependencies>
+      <dependency id="WebActivatorEx" version="2.0.5" />
+      <dependency id="CommonServiceLocator" version="1.3.0" />
+      <dependency id="structuremap" version="3.1.1.134" />
+      <dependency id="structuremap.web" version="3.1.0.133" />
+    </dependencies>
+  </metadata>
+</package>

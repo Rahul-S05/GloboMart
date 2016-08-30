@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>structuremap.web</id>
+    <version>3.1.6.186</version>
+    <title>structuremap.web</title>
+    <authors>Jeremy Miller</authors>
+    <owners>Jeremy Miller</owners>
+    <licenseUrl>https://github.com/structuremap/structuremap/raw/master/LICENSE.TXT</licenseUrl>
+    <projectUrl>http://structuremap.github.io/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>ASP.Net specific functionality for use with the StructureMap IoC container</description>
+    <summary />
+    <dependencies>
+      <dependency id="structuremap" version="3.1.6.186" />
+    </dependencies>
+  </metadata>
+</package>

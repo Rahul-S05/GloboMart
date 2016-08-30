@@ -1,0 +1,10 @@
+C:\Rahul\POC\GloboMart.App\GloboMart.App.Core.DomainModels\bin\Debug\GloboMart.App.Core.DomainModels.dll.config
+C:\Rahul\POC\GloboMart.App\GloboMart.App.Core.DomainModels\bin\Debug\GloboMart.App.Core.DomainModels.dll
+C:\Rahul\POC\GloboMart.App\GloboMart.App.Core.DomainModels\bin\Debug\GloboMart.App.Core.DomainModels.pdb
+C:\Rahul\POC\GloboMart.App\GloboMart.App.Core.DomainModels\bin\Debug\EntityFramework.dll
+C:\Rahul\POC\GloboMart.App\GloboMart.App.Core.DomainModels\bin\Debug\EntityFramework.SqlServer.dll
+C:\Rahul\POC\GloboMart.App\GloboMart.App.Core.DomainModels\bin\Debug\EntityFramework.xml
+C:\Rahul\POC\GloboMart.App\GloboMart.App.Core.DomainModels\bin\Debug\EntityFramework.SqlServer.xml
+C:\Rahul\POC\GloboMart.App\GloboMart.App.Core.DomainModels\obj\Debug\GloboMart.App.Core.DomainModels.csprojResolveAssemblyReference.cache
+C:\Rahul\POC\GloboMart.App\GloboMart.App.Core.DomainModels\obj\Debug\GloboMart.App.Core.DomainModels.dll
+C:\Rahul\POC\GloboMart.App\GloboMart.App.Core.DomainModels\obj\Debug\GloboMart.App.Core.DomainModels.pdb

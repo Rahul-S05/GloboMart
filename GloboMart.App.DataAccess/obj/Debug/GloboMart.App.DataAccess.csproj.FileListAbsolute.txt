@@ -1,0 +1,14 @@
+C:\Rahul\POC\GloboMart.App\GloboMart.App.DataAccess\bin\Debug\GloboMart.App.DataAccess.dll.config
+C:\Rahul\POC\GloboMart.App\GloboMart.App.DataAccess\bin\Debug\GloboMart.App.DataAccess.dll
+C:\Rahul\POC\GloboMart.App\GloboMart.App.DataAccess\bin\Debug\GloboMart.App.DataAccess.pdb
+C:\Rahul\POC\GloboMart.App\GloboMart.App.DataAccess\bin\Debug\EntityFramework.dll
+C:\Rahul\POC\GloboMart.App\GloboMart.App.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Rahul\POC\GloboMart.App\GloboMart.App.DataAccess\bin\Debug\GloboMart.App.Core.DomainModels.dll
+C:\Rahul\POC\GloboMart.App\GloboMart.App.DataAccess\bin\Debug\GloboMart.App.Core.Repositories.dll
+C:\Rahul\POC\GloboMart.App\GloboMart.App.DataAccess\bin\Debug\GloboMart.App.Core.DomainModels.pdb
+C:\Rahul\POC\GloboMart.App\GloboMart.App.DataAccess\bin\Debug\GloboMart.App.Core.Repositories.pdb
+C:\Rahul\POC\GloboMart.App\GloboMart.App.DataAccess\bin\Debug\EntityFramework.xml
+C:\Rahul\POC\GloboMart.App\GloboMart.App.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Rahul\POC\GloboMart.App\GloboMart.App.DataAccess\obj\Debug\GloboMart.App.DataAccess.csprojResolveAssemblyReference.cache
+C:\Rahul\POC\GloboMart.App\GloboMart.App.DataAccess\obj\Debug\GloboMart.App.DataAccess.dll
+C:\Rahul\POC\GloboMart.App\GloboMart.App.DataAccess\obj\Debug\GloboMart.App.DataAccess.pdb

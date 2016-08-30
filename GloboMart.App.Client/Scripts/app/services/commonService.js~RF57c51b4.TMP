@@ -1,0 +1,131 @@
+﻿(function () {
+    "use strict";
+    angular
+        .module("GloboMartApp")
+        .factory("dataService",
+                  ["$http", "$q", "appSettingsService", configService]);
+
+    function configService($http, $q, appSettingsService) {
+
+        var serviceUri = "";
+        var fragmentUrl = "api/Product";
+        var appConfig = null;
+
+        function init() {
+
+            serviceUri = appSettingsService.serverPath + fragmentUrl;
+        };
+
+        //var setAppConfig = function (config) {
+        //    appConfig = config;
+        //};
+
+        //var getAppConfig = function () {
+
+        //    var defer = $q.defer();
+        //    $http.get(serviceUri + "/GetAppConfig")
+        //        .success(function (response) {
+        //            appConfig = new ALEAns.appConfig(response);
+        //            defer.resolve(response);
+        //        }).error(function (error, status) {
+        //            defer.reject(error);
+        //        });
+
+        //    return defer.promise;
+        //};
+
+        var getCapabilities = function (kanbanSetting) {
+            //var $.param(data)
+            return $http.get(serviceUri + "/getCapabilities", {
+                params: kanbanSetting,
+
+            });
+        };
+        var getCapabilityDetails = function (elementId) {
+            //var $.param(data)
+            return $http.get(serviceUri + "/GetCapabilityDetails", {
+                params: { "elementId": elementId },
+
+
+            });
+        };
+        var saveProduct = function (data) {
+            console.log(data);
+            var url = serviceUri + "/Create";
+            return $http({
+                url: url,
+                method: "POST",
+                data: $.param(data),
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                }
+            });
+        };
+        var getProducts = function () {
+            return $http({
+                url: serviceUri + "/select",
+                method: "GET",
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                }
+            });
+
+        };
+
+        var getProductType = function () {
+            return $http({
+                url: appSettingsService.serverPath + "api/ProductType/select",
+                method: "GET",
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                }
+            });
+
+        };
+        var updateProduct = function (data) {
+
+            var url = serviceUri + "/Update";
+            return $http({
+                url: url,
+                method: "POST",
+                data: $.param(data),
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                }
+            });
+
+
+
+        };
+
+
+        init();
+
+        return {
+            //authenticate: authenticate,
+            //setAppConfig: setAppConfig,
+            //getAppConfig: getAppConfig,
+            //getEAPackage: getEAPackage,
+            //saveElement: saveElement,
+            //getProperties: getProperties,
+            //getKPIs: getKPIs,
+            //getCapabilities: getCapabilities,
+            //getChildCapabilities: getChildCapabilities,
+            //getCapabilityDetails: getCapabilityDetails,
+            //getEAPackageByElement: getEAPackageByElement,
+            //getInitiativeStatus: getInitiativeStatus,
+            //getMessages: getMessages,
+            //GetMessagesDetail: GetMessagesDetail,
+            //getAllMessages: getAllMessages,
+            //getOnionData: getOnionData,
+            //getRegeneratedData: getRegeneratedData,
+            //getIncrementsOnionData: getIncrementsOnionData,
+            //getRadarData: getRadarData
+            saveProduct: saveProduct,
+            getProducts: getProducts,
+            getProductType: getProductType,
+            updateProduct: updateProduct
+        };
+    };
+
+}());

@@ -1,0 +1,94 @@
+﻿(function () {
+    "use strict";
+    angular
+       .module("GloboMartApp")
+       .controller("dashboardController",
+                    ["$scope", "dataService", "toastr", dashboardController]);
+
+    function dashboardController($scope, dataService, toastr) {
+        $scope.data = "test";
+
+        $scope.products = [];
+        $scope.productTypes = [];
+        $scope.productTypesAdd = [];
+
+        $scope.product = {};
+
+        function init() {
+            getProducts();
+            getProductType();
+        };
+
+
+        init();
+
+        $scope.saveProduct = function () {
+            var requestObj = angular.copy($scope.product);
+            if ($scope.product.id > 0) {
+                dataService.updateProduct(requestObj).then(function (response) {
+                    $scope.product = [];
+                    $scope.selectedProductTypeId = 0;
+                    getProducts();
+                    toastr.clear();
+                    toastr.success("Product updated successfully", "Update Product", { timeOut: 2000 });
+                }, function (errorReason) {
+                    toastr.error("Some error, please try again", "Add Product", { timeOut: 2000 });
+                });
+
+            }
+            else {
+                dataService.saveProduct(requestObj).then(function (response) {
+                    $scope.product = [];
+                    $scope.selectedProductTypeId = 0;
+                    getProducts();
+                    toastr.clear();
+                    toastr.success("Product saved successfully", "Add Product", { timeOut: 2000 });
+                }, function (errorReason) {
+                    toastr.error("Some error, please try again", "Add Product", { timeOut: 2000 });
+                });
+            }
+        };
+
+
+        $scope.editProduct = function (data) {
+            $scope.product = data;
+            $scope.selectedProductTypeId = data.productType.id;
+        }
+
+        $scope.deleteProduct = function (data) {
+            var requestObj = angular.copy(data);
+            dataService.deleteProduct(requestObj).then(function (response) {
+                toastr.success("Product Deleted successfully", "Delete Product", { timeOut: 2000 });
+                getProducts();
+            }, function (errorReason) {
+                toastr.error("Some error, please try again", "Delete Product", { timeOut: 2000 });
+            });
+        }
+
+
+
+
+        function getProducts() {
+            dataService.getProducts().then(function (response) {
+                var storedItem = response.data;
+                $scope.products = storedItem;
+
+            }, function (errorReason) {
+                //handleError(errorReason)
+            });
+        };
+
+        function getProductType() {
+            dataService.getProductType().then(function (response) {
+                $scope.productTypes = response.data;
+                $scope.productTypesAdd = response.data;
+            }, function (errorReason) {
+                toastr.error("Some error, please try again", "Get Product", { timeOut: 2000 });
+            });
+        }
+
+
+    }
+
+
+}());

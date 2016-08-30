@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>Fabrik.Common.Web.StructureMap</id>
+    <version>1.0.0-pre</version>
+    <title>Fabrik.Common.Web.StructureMap</title>
+    <authors>Ben Foster</authors>
+    <owners>Ben Foster</owners>
+    <licenseUrl>https://raw.github.com/benfoster/Fabrik.Common/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/benfoster/Fabrik.Common</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Fabrik.Common.Web.StructureMap contains all the pieces you need to hook up ASP.NET MVC with StructureMap.</description>
+    <summary />
+    <copyright>Copyright 2012 Ben Foster</copyright>
+    <tags>fabrik dotnet aspnetmvc structuremap ioc</tags>
+    <dependencies>
+      <dependency id="Fabrik.Common" version="1.0.0-pre" />
+      <dependency id="Fabrik.Common.Web" version="1.0.0-pre" />
+      <dependency id="structuremap" version="2.6.3" />
+    </dependencies>
+  </metadata>
+</package>
